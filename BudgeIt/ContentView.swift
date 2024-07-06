@@ -33,40 +33,54 @@ struct ContentView: View {
         
         VStack {
             Text("Monthly Expenses")
-
+            
             BarChartView(data: ChartData(values: [("2018 Q4",63150), ("2019 Q1",50900), ("2019 Q2",77550), ("2019 Q3",79600), ("2019 Q4",92550)]), title: "Spending By Category", legend: "Quarterly", style: Styles.barChartMidnightGreenLight, form: ChartForm.medium, animatedToBack: true) // legend is optional
                 .frame(height: 300)
                 .padding()
-
+            
             // Other views or controls in your SwiftUI hierarchy
         }
         
+        /*TabView {
+         NavigationView {
+         HomeView()
+         }
+         .tabItem {
+         Image(systemName: "house.fill")
+         Text("Home")
+         }
+         
+         NavigationView {
+         PurchasesView()
+         }
+         .tabItem {
+         Image(systemName: "list.bullet")
+         Text("Purchases")
+         }
+         
+         NavigationView {
+         BudgetCategoriesView()
+         }
+         .tabItem {
+         Image(systemName: "chart.pie.fill")
+         Text("Budget Categories")
+         }
+         }
+         .environmentObject(viewModel)
+         }*/
         TabView {
-            NavigationView {
-                HomeView()
-            }
-            .tabItem {
-                Image(systemName: "house.fill")
-                Text("Home")
-            }
-            
-            NavigationView {
-                PurchasesView()
-            }
-            .tabItem {
-                Image(systemName: "list.bullet")
-                Text("Purchases")
-            }
-            
-            NavigationView {
-                BudgetCategoriesView()
-            }
-            .tabItem {
-                Image(systemName: "chart.pie.fill")
-                Text("Budget Categories")
-            }
+            HomeView() // Assuming you have a HomeView
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            PurchasesView()
+                .tabItem {
+                    Label("Purchases", systemImage: "list.bullet")
+                }
+            /*BudgetView() // Assuming you have a BudgetView
+             .tabItem {
+             Label("Budget", systemImage: "dollarsign.circle")
+             }*/
         }
-        .environmentObject(viewModel)
     }
-
 }

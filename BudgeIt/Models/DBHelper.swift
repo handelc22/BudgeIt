@@ -9,11 +9,11 @@ import Foundation
 import SQLite
 
 public class DBHelper {
-    static let shared = DBHelper() // Singleton instance
+    public static let shared = DBHelper() // Singleton instance
 
     private let dbConnection: Connection?
 
-    public init() {
+    private init() {
         // Path to SQLite database file in the app's Documents directory
         let path = NSSearchPathForDirectoriesInDomains(
             .documentDirectory, .userDomainMask, true
@@ -27,7 +27,7 @@ public class DBHelper {
         }
     }
 
-    private func createTable() {
+    /*private func createTable() {
         do {
             try dbConnection?.run(PurchaseTable.shared.table.create { table in
                 table.column(PurchaseTable.shared.id, primaryKey: true)
@@ -38,9 +38,22 @@ public class DBHelper {
         } catch {
             print("Unable to create table: \(error)")
         }
+    }*/
+    
+    private func createTable() {
+        do {
+            try dbConnection?.run(Table("purchases").create(ifNotExists: true) { table in
+                table.column(Expression<Int64>("id"), primaryKey: true)
+                table.column(Expression<String>("itemName"))
+                table.column(Expression<Double>("amount"))
+            })
+        } catch {
+            print("Unable to create table: \(error)")
+        }
     }
 
-    public func addPurchase2(itemName: String, amount: Double) -> Int64? {
+
+    public func addPurchase(itemName: String, amount: Double) -> Int64? {
         print("hitting addPurchase2??")
         do {
             let insert = PurchaseTable.shared.table.insert(
@@ -54,6 +67,28 @@ public class DBHelper {
             print("Insert failed: \(error)")
             return nil
         }
+    }
+    
+    public struct Purchase: Identifiable {
+        public let id: Int64
+        public let itemName: String
+        public let amount: Double
+    }
+
+    // Method to fetch all purchases
+    public func getAllPurchases() -> [Purchase] {
+        var purchases = [Purchase]()
+        do {
+            for purchase in try dbConnection!.prepare(Table("purchases")) {
+                let id = purchase[Expression<Int64>("id")]
+                let itemName = purchase[Expression<String>("itemName")]
+                let amount = purchase[Expression<Double>("amount")]
+                purchases.append(Purchase(id: id, itemName: itemName, amount: amount))
+            }
+        } catch {
+            print("Fetch failed: \(error)")
+        }
+        return purchases
     }
 
     /*func getAllPurchases() -> [Purchase] {

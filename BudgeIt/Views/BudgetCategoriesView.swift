@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct BudgetCategoriesView: View {
+/*struct BudgetCategoriesView: View {
     @EnvironmentObject var viewModel: BudgeItViewModel
     
     var body: some View {
@@ -26,4 +26,4 @@ struct BudgetCategoriesView: View {
 
 #Preview {
     BudgetCategoriesView()
-}
+}*/
