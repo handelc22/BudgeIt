@@ -15,6 +15,17 @@
 		46041F372C3889CF00E48B1A /* BudgeItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46041F362C3889CF00E48B1A /* BudgeItTests.swift */; };
 		46041F412C3889CF00E48B1A /* BudgeItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46041F402C3889CF00E48B1A /* BudgeItUITests.swift */; };
 		46041F432C3889CF00E48B1A /* BudgeItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46041F422C3889CF00E48B1A /* BudgeItUITestsLaunchTests.swift */; };
+		4648AA3C2C38A4F6001DA238 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648AA3B2C38A4F6001DA238 /* DBHelper.swift */; };
+		4648AA3E2C38A53F001DA238 /* Purchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648AA3D2C38A53F001DA238 /* Purchase.swift */; };
+		4648AA442C38A675001DA238 /* PurchaseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4648AA432C38A675001DA238 /* PurchaseTable.swift */; };
+		469E69B02C3891ED00EE8E66 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E69AF2C3891ED00EE8E66 /* Models.swift */; };
+		469E69B22C38922600EE8E66 /* BudgeItViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E69B12C38922600EE8E66 /* BudgeItViewModel.swift */; };
+		469E69B62C3892C000EE8E66 /* AddPurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E69B52C3892C000EE8E66 /* AddPurchaseView.swift */; };
+		469E69B82C38930200EE8E66 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E69B72C38930200EE8E66 /* HomeView.swift */; };
+		469E69BA2C38931F00EE8E66 /* PurchasesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E69B92C38931F00EE8E66 /* PurchasesView.swift */; };
+		469E69BC2C38933400EE8E66 /* BudgetCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469E69BB2C38933400EE8E66 /* BudgetCategoriesView.swift */; };
+		469E69BF2C38961D00EE8E66 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 469E69BE2C38961D00EE8E66 /* SwiftUICharts */; };
+		46CD974A2C38A82000173827 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 46CD97492C38A82000173827 /* SQLite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +58,15 @@
 		46041F3C2C3889CF00E48B1A /* BudgeItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgeItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46041F402C3889CF00E48B1A /* BudgeItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgeItUITests.swift; sourceTree = "<group>"; };
 		46041F422C3889CF00E48B1A /* BudgeItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgeItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4648AA3B2C38A4F6001DA238 /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		4648AA3D2C38A53F001DA238 /* Purchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchase.swift; sourceTree = "<group>"; };
+		4648AA432C38A675001DA238 /* PurchaseTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTable.swift; sourceTree = "<group>"; };
+		469E69AF2C3891ED00EE8E66 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		469E69B12C38922600EE8E66 /* BudgeItViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgeItViewModel.swift; sourceTree = "<group>"; };
+		469E69B52C3892C000EE8E66 /* AddPurchaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPurchaseView.swift; sourceTree = "<group>"; };
+		469E69B72C38930200EE8E66 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		469E69B92C38931F00EE8E66 /* PurchasesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesView.swift; sourceTree = "<group>"; };
+		469E69BB2C38933400EE8E66 /* BudgetCategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetCategoriesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46CD974A2C38A82000173827 /* SQLite in Frameworks */,
+				469E69BF2C38961D00EE8E66 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +103,7 @@
 				46041F352C3889CF00E48B1A /* BudgeItTests */,
 				46041F3F2C3889CF00E48B1A /* BudgeItUITests */,
 				46041F202C3889CC00E48B1A /* Products */,
+				46CD97482C38A82000173827 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +122,9 @@
 			children = (
 				46041F222C3889CC00E48B1A /* BudgeItApp.swift */,
 				46041F242C3889CC00E48B1A /* ContentView.swift */,
-				46041F262C3889CC00E48B1A /* Item.swift */,
+				4648AA422C38A59B001DA238 /* Tables */,
+				4648AA3F2C38A56F001DA238 /* Models */,
+				4648AA402C38A581001DA238 /* Views */,
 				46041F282C3889CE00E48B1A /* Assets.xcassets */,
 				46041F2A2C3889CE00E48B1A /* BudgeIt.entitlements */,
 				46041F2B2C3889CE00E48B1A /* Preview Content */,
@@ -132,6 +157,44 @@
 			path = BudgeItUITests;
 			sourceTree = "<group>";
 		};
+		4648AA3F2C38A56F001DA238 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4648AA3B2C38A4F6001DA238 /* DBHelper.swift */,
+				469E69B12C38922600EE8E66 /* BudgeItViewModel.swift */,
+				46041F262C3889CC00E48B1A /* Item.swift */,
+				469E69AF2C3891ED00EE8E66 /* Models.swift */,
+				4648AA3D2C38A53F001DA238 /* Purchase.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4648AA402C38A581001DA238 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				469E69B92C38931F00EE8E66 /* PurchasesView.swift */,
+				469E69B52C3892C000EE8E66 /* AddPurchaseView.swift */,
+				469E69BB2C38933400EE8E66 /* BudgetCategoriesView.swift */,
+				469E69B72C38930200EE8E66 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4648AA422C38A59B001DA238 /* Tables */ = {
+			isa = PBXGroup;
+			children = (
+				4648AA432C38A675001DA238 /* PurchaseTable.swift */,
+			);
+			path = Tables;
+			sourceTree = "<group>";
+		};
+		46CD97482C38A82000173827 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +211,10 @@
 			dependencies = (
 			);
 			name = BudgeIt;
+			packageProductDependencies = (
+				469E69BE2C38961D00EE8E66 /* SwiftUICharts */,
+				46CD97492C38A82000173827 /* SQLite */,
+			);
 			productName = BudgeIt;
 			productReference = 46041F1F2C3889CC00E48B1A /* BudgeIt.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +287,10 @@
 				Base,
 			);
 			mainGroup = 46041F162C3889CC00E48B1A;
+			packageReferences = (
+				469E69BD2C38961D00EE8E66 /* XCRemoteSwiftPackageReference "ChartView" */,
+				4648AA3A2C38A4C0001DA238 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+			);
 			productRefGroup = 46041F202C3889CC00E48B1A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,9 +333,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4648AA3E2C38A53F001DA238 /* Purchase.swift in Sources */,
+				4648AA442C38A675001DA238 /* PurchaseTable.swift in Sources */,
+				469E69B62C3892C000EE8E66 /* AddPurchaseView.swift in Sources */,
+				469E69B82C38930200EE8E66 /* HomeView.swift in Sources */,
 				46041F252C3889CC00E48B1A /* ContentView.swift in Sources */,
+				469E69BC2C38933400EE8E66 /* BudgetCategoriesView.swift in Sources */,
+				469E69B22C38922600EE8E66 /* BudgeItViewModel.swift in Sources */,
 				46041F272C3889CC00E48B1A /* Item.swift in Sources */,
 				46041F232C3889CC00E48B1A /* BudgeItApp.swift in Sources */,
+				4648AA3C2C38A4F6001DA238 /* DBHelper.swift in Sources */,
+				469E69B02C3891ED00EE8E66 /* Models.swift in Sources */,
+				469E69BA2C38931F00EE8E66 /* PurchasesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -408,6 +489,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -621,6 +703,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4648AA3A2C38A4C0001DA238 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.15.3;
+			};
+		};
+		469E69BD2C38961D00EE8E66 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		469E69BE2C38961D00EE8E66 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 469E69BD2C38961D00EE8E66 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		46CD97492C38A82000173827 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4648AA3A2C38A4C0001DA238 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 46041F172C3889CC00E48B1A /* Project object */;
 }
